@@ -25,11 +25,17 @@ Can you do both row and column operations? Or can you only pick one or the other
 
 
 
-2.3 - Auxiliary topics
-######################
+2.3 - Auxiliary topics (Optional)
+#################################
 
 How is any of that stuff true?
 
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Chapter 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 3.2 - Subspaces
@@ -54,11 +60,6 @@ Why if a *unique* ``x0`` solution exists to ``Ax=b`` is *one* vector from the nu
 **Come back to this!**
 
 
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Chapter 3
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 3.3 - Linear Independence
 #########################
@@ -302,8 +303,8 @@ Example 13 - ``D: P_3 -> P_3`` differentiation operator
 
 
 
-4.2 - Matrix Representation of L.T.s
-####################################
+4.2 - Matrix Representation of L.T.
+###################################
 
 Thm 4.2.1 ``L: R^n -> R^m``, there exists a matrix ``L(x) = Ax`` where ``A`` is an ``m x n`` matrix.
 
@@ -388,3 +389,94 @@ Questions 5.2
 Given three vectors, determine if the third is a linear combination of the first two.
 
 - See if ``v3`` is in ``S_perp`` or not.
+
+
+
+5.3 - Least Squares Problems (Optional)
+#######################################
+
+**TODO:** review what the ``⊕`` symbol means (page 242 **AND** in an earlier section!)
+
+(**Note:** This section should talk about **non-standard bases**.)
+
+
+Least squares "curve-fitting" is a common problem. Gauss used it accurately predict planetary motion.
+
+
+Can be generally modeled as an **overdetermined linear system** (more equations than unknowns - usually *inconsistent*).
+
+We can find an **approximate solution** to ``Ax=b`` by minimizing the residual.
+
+Def: the **residual** is ``r(x) = b -Ax``.
+
+The distance between ``b`` and ``Ax`` is: ``|b - Ax| = |r(x)|``.
+
+We want to find an ``x ∈ R^n`` which minimizes this distance. Minimizing ``|r(x)|`` is the same as minimizing ``|r(x)|^2``.
+
+This solution (input) not only exists, but the resulting vector in the column space (output) is unique.
+
+Example 1 - **TODO:** finish this section
+
+
+
+5.4 - Inner Product Spaces
+##########################
+
+Def: Inner product on vector space ``V``:
+
+- ``〈x,x〉 > 0, it equals zero if x=0``
+- ``〈x,y〉=〈y,x〉for all x,y in V``
+- ``〈a*x + b*y, z〉= a*〈x,z〉+ b*〈y,z〉 for all x,y,z in V and scalars a,b``
+
+A vector space with an inner product is called an inner product space.
+
+
+``R^n`` is a vector space (real vectors)
+
+- Ex: ``〈x,x〉= x^T*y`` (scalar product)
+- Ex: ``〈x,y〉= sum(x_i * y_i * w_i)`` (weights, weighted product)
+
+
+``C[a,b]`` is a vector space (functions)
+
+- Ex: ``〈f,g〉= Integral(f(x) g(x) dx, a, b)``, (this is positive for ``〈f,f〉``, since ``f(x)^2 > 0``
+
+
+
+5.5 - Orthonormal sets
+######################
+
+Hi
+
+
+
+5.6 - Gram-Schmidt orthogonalization
+####################################
+
+Hi
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Chapter 6
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+6.1 - Eigenvalues & eigenvectors
+################################
+
+Hi
+
+
+
+6.2 - Diagonalization
+#####################
+
+Hi
+
+
+
+6.5 - The Single-Value Decomposition
+####################################
+
+Hi
