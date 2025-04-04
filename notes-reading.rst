@@ -439,7 +439,7 @@ A vector space with an inner product is called an inner product space.
 
 ``C[a,b]`` is a vector space (functions)
 
-- Ex: ``〈f,g〉= Integral(f(x) g(x) dx, a, b)``, (this is positive for ``〈f,f〉``, since ``f(x)^2 > 0``
+- Ex: ``〈f,g〉= Integral(f(x)*g(x) dx, a, b)``, (this is positive for ``〈f,f〉``, since ``f(x)^2 > 0``)
 
 
 
