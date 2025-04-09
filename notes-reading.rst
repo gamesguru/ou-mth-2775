@@ -67,15 +67,15 @@ Why if a *unique* ``x0`` solution exists to ``Ax=b`` is *one* vector from the nu
 PT #1
 ~~~~~
 
-v1=(1,2,3), v2=(2,-1,0), v3=(-2,3,-1), v4=(-1,2,3)
+``v1=(1,2,3), v2=(2,-1,0), v3=(-2,3,-1), v4=(-1,2,3)``
 
 Attempt 1
 
-v1 - v4 = (2,0,0)
+``v1 - v4 = (2,0,0)``
 
-v2 - (v1 - v4) = (0,-1,0)
+``v2 - (v1 - v4) = (0,-1,0)``
 
-v3 + (v1 - v4) - 3[v2 - (v1 - v4)] = (0,0,-1)
+``v3 + (v1 - v4) - 3[v2 - (v1 - v4)] = (0,0,-1)``
 
 
 Reading 3.3
@@ -146,7 +146,7 @@ Example 2
 Finding the **null space** of matrix gives you solutions to the homogeneous equation.
 You can find the basis and dimension based on decomposing the solutions into sums of multiples of the bases vectors.
 
-Thm 3.4.1 - any collection of ``n+1`` vectors (in a space ``V`` spanned by ``n`` vectors) are L.D.
+Theorem 3.4.1 - any collection of ``n+1`` vectors (in a space ``V`` spanned by ``n`` vectors) are L.D.
 (see proof on page 158)
 
 All **bases** of the same spanning set have the **same dimension**.
@@ -207,25 +207,25 @@ Def: ``A (m x n matrix)``
 - Row space = subspace of ``R^(1 x n)`` spanned by rows
 - Col space = subspace of ``R^m`` spanned by columns
 
-Thm 3.6.1 - Two row equivalent matrices have the same row space.
+Theorem 3.6.1 - Two row equivalent matrices have the same row space.
 
 Def: **rank** is the dimension of the row space
 
-Thm 3.6.2 - ``Ax = b`` is consistent <=> ``b ∈ C(A)`` (b in col space of A)
+Theorem 3.6.2 - ``Ax = b`` is consistent <=> ``b ∈ C(A)`` (b in col space of A)
 
 - ``Ax = 0`` has trivial solution ``x=0`` iff col vectors of A are L.I.
 
-Thm 3.6.2 - ``Ax = b`` is consistent for every ``b ∈ R^m`` iff col vectors span ``R^m``
+Theorem 3.6.2 - ``Ax = b`` is consistent for every ``b ∈ R^m`` iff col vectors span ``R^m``
 
 - ``Ax = b`` has at most one solution for every ``b ∈ R^m`` iff the col vectors of A are L.I.
 
 **NOTE:** if col vectors span ``R^m``, then ``n>=m`` (at least as many rows as columns).
 
-Corollary 3.6.4 - ``n x n`` square matrix ``A`` is nonsingular iff col vectors of ``A`` form a basis for ``R^n``.
+Corollary 3.6.4 - ``n x n`` square matrix ``A`` is non-singular iff col vectors of ``A`` form a basis for ``R^n``.
 
-Thm 3.6.5 - Let ``A`` be an  ``(m x n)`` matrix, then ``rank(A) + nullity(A) = n``
+Theorem 3.6.5 - Let ``A`` be an  ``(m x n)`` matrix, then ``rank(A) + nullity(A) = n``
 
-Thm 3.6.6 - ``dim(R(A)) = dim(C(A))`` (see proof on page 176)
+Theorem 3.6.6 - ``dim(R(A)) = dim(C(A))`` (see proof on page 176)
 
 
 **NOTE:** In ``U = rref(A)``, the leading entries in ``U`` determine which columns to choose from ``A`` to span ``C(A)``. (in general ``C(A) != C(U)``)
@@ -278,7 +278,7 @@ Def: ``L: V->W`` and ``S`` is subspace of ``V``. The **image** ``L(S) = {w ∈ W
 
 - The image of the *entire* vector space, ``L(V)``, is called the **range** of L
 
-Thm 4.1.1 - ``Ker(L)`` is a subspace of ``V``, and ``Range(S)`` is a subspace of ``W``
+Theorem 4.1.1 - ``Ker(L)`` is a subspace of ``V``, and ``Range(S)`` is a subspace of ``W``
 
 
 Example 11 - Let ``L(x) = (x1, 0)T``. Then ``x ∈ ker(L)`` iff ``x1=0``, so the **kernel** is the one-dimension subspace spanned by ``e2=(0, 1)``. The **range** is the space spanned by ``e1``.
@@ -306,7 +306,7 @@ Example 13 - ``D: P_3 -> P_3`` differentiation operator
 4.2 - Matrix Representation of L.T.
 ###################################
 
-Thm 4.2.1 ``L: R^n -> R^m``, there exists a matrix ``L(x) = Ax`` where ``A`` is an ``m x n`` matrix.
+Theorem 4.2.1 ``L: R^n -> R^m``, there exists a matrix ``L(x) = Ax`` where ``A`` is an ``m x n`` matrix.
 
 (proof: see page 195)
 
@@ -327,7 +327,7 @@ Def: ``xT*y = x1*y1 + ... + x_n*y_n``
 
 Distance from x to y: ``|x - y|``
 
-Thm 5.1.1 ``xT*y = |x| |y| cos(theta)`` (for ``R^2`` and ``R^3``)
+Theorem 5.1.1 ``xT*y = |x| |y| cos(theta)`` (for ``R^2`` and ``R^3``)
 
 Cauchy-Schwarz Inequality: ``|xT*y| <= |x| |y|`` (for ``R^2`` and ``R^3``)
 
@@ -355,29 +355,29 @@ From chapter 3, ``b ∈ R^m`` is in ``C(A)`` iff ``Ax = b`` for some ``x ∈ R^n
 
 - ``C(A) = range(A)``
 - ``Range(A)   = {b ∈ R^m | b=Ax    for some x ∈ R^n} = CS(A)``
-- ``Range(A^T) = {y ∈ R^n | y=A^T*x for some x ∈ R^m} = RS(A)
+- ``Range(A^T) = {y ∈ R^n | y=A^T*x for some x ∈ R^m} = RS(A)``
 
 
-Thm 5.2.1 ``N(A) = Range(A^T)_perp`` and ``N(A^T) = Range(A)_perp
+Theorem 5.2.1 ``N(A) = Range(A^T)_perp`` and ``N(A^T) = Range(A)_perp``
 
 (see proof on page 235)
 
 
 Example 3
 
-```text
+.. code-block:: text
 
-A = 1 0
-    2 0
+  A = 1 0
+      2 0
 
-CS(A) = a.(1,2)T
+  CS(A) = a.(1,2)T
 
-b=Ax => b=x1.(1,2)T
-```
+  b=Ax => b=x_1.(1,2)T
+
 
 What about the null space of A^T?
 
-Thm 5.2.2 - ``dim(S) + dim(S_perp) = n``. Furthermore,``S u S_perp = span{x1, ... x_n} = R^n``
+Theorem 5.2.2 - ``dim(S) + dim(S_perp) = n``. Furthermore,``S u S_perp = span{x1, ... x_n} = R^n``
 
 
 ``dim Range(A) = dim Range(A^T) = rank(A) = r``
@@ -439,21 +439,297 @@ A vector space with an inner product is called an inner product space.
 
 ``C[a,b]`` is a vector space (functions)
 
-- Ex: ``〈f,g〉= Integral(f(x)*g(x) dx, a, b)``, (this is positive for ``〈f,f〉``, since ``f(x)^2 > 0``)
+Ex: ``C[a,b]`` (continuous functions) ``〈f,g〉= Integral(f(x)*g(x) dx, a, b)``, (this is positive for ``〈f,f〉``, since ``f(x)^2 >= 0``)
+
+Ex:``P_n`` (polynomials) ``〈p,q〉= Sum[p(x_i)*q(x_i), i=0 to i=n]``
+(see proof it's an inner product on page 255-256. **Note:** can also have a weight term, ``w(x_i)``)
+
+The length, or norm of v is given by ``||v|| = Sqrt[〈v,v〉]``.
+
+
+Pythagorean Law: if ``u,v`` are orthogonal vectors in an **inner product space** V, then
+``||u+v||^2 = ||u||^2 + ||v||^2``.
+
+Proof:
+
+.. code-block:: text
+
+  ||u+v||^2 = 〈u+v, u+v〉
+            = 〈u,u〉+ 2〈u,v〉 + 〈v,v〉
+            = ||u||^2 + ||v||^2.
+
+Geometrically visualized, this is just a right triangle.
+
+
+Ex: Over ``C[-1,1]``, ``1`` and ``x`` are orthogonal. What are the respective lengths?
+
+Ex: Over ``C[−π, π]``, define ``〈f,g〉= 1/π  * Integral[f (x)g(x) dx, {x, −π, π}]``.
+Then ``|| cos x + sin x || = Sqrt[2]``.
+
+This plays an important role in **Fourier analysis** applications involving trig approximations of functions.
+
+
+The vector space ``R^(m x n)`` has the **Frobenius Norm**, ``||A\|_F = Sqrt[ Sum[a_ij^2] ]``
+
+Ex 4: Define an inner product over ``P_n`` using inner product defined in previous examples.
+
+
+Scalar Projections
+~~~~~~~~~~~~~~~~~~
+
+Let ``u,v ∈ V`` for inner product space V and ``α ∈ R``, then the **scalar projection** of ``u`` onto ``v`` is: ``α = 〈u,v〉/ ||v||``.
+
+The **vector projection** of ``u`` onto ``v`` is: ``p = α*(v / ||v||) = (〈u,v〉/〈v,v〉)* v``.
+
+Observe: if ``v`` is nonzero and ``p = proj(u onto v)``, then
+
+- ``u - p`` and ``p`` are orthogonal
+- ``u = p`` iff ``u`` is a scalar multiple of ``v``
+
+(see proof on page 258)
+
+
+We use these two observations to prove the **Cauchy-Schwarz inequality**:
+``|〈u,v〉| ≤ ||u|| * ||v||``. (Equality holds iff u,v are linearly *dependent*.)
+
+(see proof on page 259)
+
+
+Norms
+~~~~~
+
+A vector space ``V``is said to be a **normed linear space** if for all ``v ∈ V`` there is a real ``||v||`` called the **norm** of ``v``, such that
+
+i. ``||v|| ≥ 0``, with equality iff ``v=0``.
+ii. ``||αv||= |α|*||v|| for any scalar α.``
+iii. ``||v+w|| ≤ ||v|| + ||w||`` for all ``v, w ∈ V``. (aka, **triangle inequality**)
+
+
+Theorem 5.4.3 If ``V`` is an IPS, then ``||v|| = Sqrt[〈v,v〉]`` for all ``v ∈ V`` defines a norm on ``V``.
+(see proof on page 260... and check your work to HW problem 25 from section 5.4)
+
+
+Norm-1: ``||x||_1 = Sum[ |x_i|, i=1 to i=n]`` (sum of absolute values of each ``n`` components)
+
+Norm-inf: ``||x||_∞ = max(|x_i|) over i ∈ I`` (max absolute value)
+
+Norm-2: ``||x||_2 = Sqrt[ Sum[ |x_i|^2 ] ]`` (Euclidean norm)
+
+(see page 261 for interesting discussion on orthogonality in ``R^n``)
+
+
+**Distance** between ``x`` and ``y`` is the real number ``||y - x||``.
+
+Some applications involve finding the "closest" vector in a subspace ``S`` to a given vector ``v`` in a vector space ``V``.
+If the norm used for ``V`` is derived from an inner product, then the closet vector can be computed as a vector projection of ``v`` onto the subspace ``S``.
+This type of approximation problem is discussed in **section 5.5**.
 
 
 
 5.5 - Orthonormal sets
 ######################
 
-Hi
+In ``R^2``, we typically use the standard basis ``{e1, e2}`` rather than, say, ``{(2,1)T, (3,5)T}``.
+
+Elements of the standard basis are orthogonal unit vectors.
+
+In the inner product space ``V``, it generally helps to have a set of mutually orthogonal unit vectors.
+
+This is useful not only for finding coordinates of vectors but also in solving least squares problems.
+
+Def: Let ``v1, v2, ..., v_n`` be nonzero vectors in an IPS ``V``. If ``∀i,j ∈ {1, 2, ..., n}: i != j ⇒ 〈v_i, v_j〉 = 0``, then ``{v1, v2, ..., v_n}`` is an **orthogonal set** of vectors.
+
+
+Ex 1: ``{(1,1,1)T, (2,1,-3)T, (4,-5,1T)}`` is an orthogonal set in ``R^3``, since all 3 dot products are zero.
+
+
+Theorem 5.5.1: If ``{v1, v2, ..., v_n}`` is an orthogonal set of nonzero vectors in an inner product space V,
+then ``v1, v2, ..., v_n`` are linearly independent.
+
+(see proof on page 264)
+
+
+Def: An **orthonormal** set of vectors is an orthogonal set of unit vectors.
+
+The set ``{u1, u2, ..., u_n}`` is orthonormal iff ``〈u_i, u_j〉 = {1 (if i = j), 0 (if i != j)}``.
+
+Given any orthogonal set of ``n`` nonzero vectors, you can form an orthonormal st by defining
+``u_i = (1 / ||v_i||) v_i``. **Note:** How can you verify this is an orthonormal set?
+
+Ex 2: Form an orthonormal set from the vectors in Example 1.
+
+
+Ex 3: In ``C[−π, π]``, the set ``{1, cos(x), cos(2x), ... cos(n*x)}`` form an orthogonal set:
+
+- ``〈1, cos(kx)〉= 0``
+- ``〈cos(jx), cos(kx)〉= 0, if j != k``
+
+Functions ``{cos(x), cos(2x), ..., cos(n*x)}`` are already unit vectors, since
+``〈cos(kx), cos(kx)〉= 1/pi * Integral[cos(kx)^2 dx, x=-pi to x=pi] = 1, for all n ∈ I)``
+
+We need only find the unit vector for the function ``1``,
+``||1||^2 = 〈1,1〉= 1/pi * Integral[dx, x=-pi to x=pi] = 2``.
+
+Therefore ``1/Sqrt[2]`` is a unit vector, and the set ``{1/Sqrt[2], cos(x), cos(2x), ..., cos(n*x)}`` form an orthonormal set of vectors.
+
+
+Theorem 5.5.2: Let ``{u1, u2, ..., u_n}`` be an orthonormal basis for an inner produce space ``V``. If ``v = Sum[c_i * u_i, i=1 to i=n]``, then ``c_i = 〈v,u_i〉``.
+(see proof on page 265)
+
+Corollary 5.5.3: Let ``{u1, u2, ..., u_n}`` be an orthonormal basis for an inner product space ``V``. If from i=1 to i=n ``u = Sum[a_i * u_i]`` and ``v = Sum[b_i * u_i]``, then ``〈u,v〉= Sum[a_i * b_i]``.
+(see proof on page 266)
+
+Corollary 5.5.4 *Parseval's Formula*
+if ``{u1, ...., u_n}`` is an orthonormal basis for an IPS ``V`` and ``v = Sum[c_i * u_i, i=1 to n]``, then
+``||v||^2 = Sum[c_i^2, i=1 to n]``.
+
+Proof: see corollary 5.5.3
+
+
+Ex 4: ``u_1 = (1/sqrt[2], 1/sqrt[2])T, u_2 = (1/sqrt[2], -1/sqrt[2])T`` form an orthonormal basis for ``R^2``.If ``x ∈ R^2``, then ``x^T * u_i = (x1 + x2)/sqrt[2], x^T * u_2 = (x1 - x2)/sqrt[2]``.
+By theorem 5.5.2, ``x = (x1 + x2)/sqrt[2] * u_1 + (x1 - x2)/sqrt[2] * u_2``.
+By corollary 5.5.4, ``||x||^2 = (x1 + x2)^2 / 2 + (x1 - x2)^2  2 = x1^2 + x2^2``.
+
+
+Ex 5: Given that ``{1/sqrt[2], cos(2x)}`` is an orthonormal set in ``C[−π, π]`` (IPS as in Example 3),
+determine the value of ``Integral[sin(x)^4 dx, x, -π, π]`` without using antiderivatives.
+
+Since ``sin(x)^2 = (1 - cos 2x) / 2 = 1/sqrt(2) * 1/sqrt(2) + (-1/2) cos(2x)``,
+Parseval's formula gives ``Integral[sin(x)^4 dx, x, -π, π] = π * ||sin(x)^2||^2 = π(1/2 + 1/4) = 3π/4``.
+
+**TODO:** Revisit Example 5.
+
+
+Orthogonal Matrices
+~~~~~~~~~~~~~~~~~~~
+
+Consider ``n x n`` matrices whose column vectors form an orthonormal set in ``R^n``.
+
+Def: An ``n x n`` matrix ``Q`` is an **orthogonal matrix** if its column vectors form an *orthonormal* set in ``R^n``.
+
+
+Theorem 5.5.5 An ``n x n`` matrix ``Q`` is orthogonal iff ``Q^T * Q = 1``.
+
+Proof: Q is orthogonal iff its column vectors satisfy ``q_i^T * q_j = delta_ij``. Now ``q_i^T * q_j`` is the (i,j) entry of the matrix ``Q^T * Q``. Thus Q is orthogonal iff ``Q^T * Q = 1``.
+
+**TODO:** allude to ``delta_ij``, but it wasn't defined explicitly in the previous section's notes. Revisit theorem 5.5.5 and its proof.
+
+
+Ex 6: For a fix angle ``a``, the matrix
+
+.. code-block:: text
+
+  Q = cos(a)  -sin(a)
+      sin(a)   cos(a)
+
+is orthogonal and
+
+.. code-block:: text
+
+  Q^-1 = Q^T =  cos(a)  sin(a)
+               -sin(a)  cos(a)
+
+Properties of Orthogonal Matrices
+
+a. the column vectors of ``Q`` form an orthonormal basis for ``R^n``.
+b. ``Q^T * Q = 1``
+c. ``Q^T = Q^-1``
+d. ``〈Qx,Qy〉=〈x,y〉``
+e. ``||Qx||_2 = ||x||_2``
+
+
+Permutation Matrices
+~~~~~~~~~~~~~~~~~~~~
+
+A *permutation matrix* is one formed by reordering the columns of the identity matrix.
+
+Clearly, permutation matrices are orthogonal matrices.
+
+If ``P`` is the permutation matrix obtained by reordering the columns of ``I`` in the order ``(k1, ...., k_n)``, then ``P = (e_k1, ...., e_kn)``.
+
+If ``A`` is an ``m x n`` matrix, then ``AP = (A*e_k1, ...., A*E_kn) = (a_k1, ...., a_kn)``.
+
+Post-multiplication of A by P reorders the columns of A in the order ``(k1, ...., k_n)``, i.e., if
+
+.. code-block:: text
+
+  A = 1 2 3         and P = 0 1 0
+      1 2 3                 0 0 1
+                            1 0 0
+
+  then
+
+  AP = 3 1 2
+       3 1 2
+
+Since ``P = (e_k1, ...., e_kn)`` is orthogonal, it follows that
+
+.. code-block:: text
+
+  P^-1 = P^T = e_k1^T
+                 .
+                 .
+                 .
+               e_kn^T
+
+The ``k1`` column of P^T will be ``e1``, the ``k2`` will be ``e2``, and so on.
+Thus, ``P^T`` is a permutation matrix. The matrix ``P^T`` can be formed from ``I`` by reordering its rows in the order ``(k1, k2, ...., k_n)``.
+
+Generally, a permutation matrix can be formed from ``I`` by reordering either its rows or its columns.
+
+If ``Q`` is the permutation matrix formed by reordering the rows of ``I`` in the order ``(k1, k2, ..., k_n)`` and ``B`` is an ``n x r`` matrix, then
+
+.. code-block:: text
+
+       e_k1^T           e_k1^T * B       b_k1
+         .                 .              .
+  QB =   .       * B =     .          =   .
+         .                 .              .
+       e_kn^T           e_kn^T * B       b_kn
+
+Thus, ``QB`` is a matrix formed by reordering the rows of ``B`` in the order ``(k1, k2, ..., k_n)``.
+
+.. code-block:: text
+
+      0 0 1                     1 1
+  Q = 1 0 0       and       B = 2 2
+      0 1 0                     3 3
+
+  then
+
+       3 3
+  QB = 1 1
+       2 2
+
+In general, if ``P`` is an ``n x n`` permutation matrix, pre-multiplication of an ``n x r`` matrix ``B`` by ``P`` reorders the rows of B and *Post-multiplication* of an ``m x n`` matrix ``A`` by ``P`` reorders the column of ``A``.
+
+
+Orthonormal Sets and Least Squares
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Approximation of Functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Approximation by Trigonometric Polynomials
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+APPLICATION I: Signal Processing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Discrete Fourier Transform
+******************************
+
+
+The Fast Fourier Transform
+**************************
 
 
 
 5.6 - Gram-Schmidt orthogonalization
 ####################################
-
-Hi
 
 
 
@@ -465,18 +741,12 @@ Chapter 6
 6.1 - Eigenvalues & eigenvectors
 ################################
 
-Hi
-
 
 
 6.2 - Diagonalization
 #####################
 
-Hi
-
 
 
 6.5 - The Single-Value Decomposition
 ####################################
-
-Hi
