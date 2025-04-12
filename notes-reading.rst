@@ -741,9 +741,13 @@ Chapter 6
 6.1 - Eigenvalues & eigenvectors
 ################################
 
+Questions for Professor
+
+- Does a double root have significance, i.e., if ``(l - 2)^2 = 0``?
 
 
-6.2 - Diagonalization
+
+6.3 - Diagonalization
 #####################
 
 
