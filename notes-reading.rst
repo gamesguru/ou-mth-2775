@@ -11,6 +11,30 @@ Sample Exam II (questions)
 
 
 
+Review (self - Final)
+#####################
+
+Fundamental Subspaces Theorem and # solutions (to Ax=b problems)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Theorem 5.2.1: If ``A`` is ``m x n``, then **N(A) = R(Aᵀ)** :sup:`⊥` and **N(Aᵀ) = R(A)** :sup:`⊥`.
+
+Proof:
+
+We already know ``N(A) ⊥ R(Aᵀ)`` and, therefore, ``N(A) ⊂ R(Aᵀ)`` :sup:`⊥`.
+
+On the other hand, if **x** is any vector in ``R(Aᵀ)`` :sup:`⊥`, then **x** is orthogonal to each column vector in ``Aᵀ``, so ``Ax = 0``.
+
+Thus, ``x`` must be an element of ``N(A)``. So, ``N(A) = R(Aᵀ)`` :sup:`⊥`.
+
+This also holds for square matrices. If ``B=Aᵀ``, then
+
+N(Aᵀ) = N(B) = R(Bᵀ) :sup:`⊥` = R(A) :sup:`⊥`.
+
+QED
+
+
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Chapter 2
@@ -743,12 +767,147 @@ Chapter 6
 
 Questions for Professor
 
-- Does a double root have significance, i.e., if ``(l - 2)^2 = 0``?
+- Does a double root have significance, i.e., if ``(λ - 2)^2 = 0``?
+
+Notes 6.1
+~~~~~~~~~
+
+Ex 1: 30% of married women divorce and 20% of single women marry each year. Find steady state vector.
+
+**TODO:** Review this to understand the inspiration/motivation for eigenvalues.
+
+Def: ``A`` is ``n x n``, then ``λ`` is an **eigenvalue** if there exists a *nonzero* vector ``x`` such that ``Ax=λx``. Note that ``x`` is called the **eigenvector**.
+
+Ex 2: Since ``Ax=3x``, ``λ=3``.
+
+The set of solutions to ``(A-λI)x = 0`` is ``N(A-λI)``
+(a subspace of ``R^n``).
+
+So, if ``λ``is an eigenvalue of ``A``, then ``N(A-λI) != 0``.
+
+The eigenspace is ``N(A-λI)``
+
+``(A-λI)x = 0`` has a nontrivial solution iff ``A-λI`` is singular, i.e., if ``det(A-λI) = 0``.
+
+The nth-degree "characteristic" polynomial is ``p(λ) = det(A-λI)``.
+The roots are the eigenvalue(s).
+Each root has a ``multiplicity``, usually 1.
+Including **repeated** and **complex** roots, each characteristic polynomial has ``n`` roots.
+
+
+Ex 5: In case of **complex** eigenvalues, there are multiple eigenvectors that are equivalent!
+
+**TODO:** revisit application 1 and 2.
+
+
+Complex Eigenvalues
+~~~~~~~~~~~~~~~~~~~
+
+If ``λ=a+bi`` is a solution, so is ``λ=a-bi`` (the complex conjugate).
+
+A matrix can also be complex.
+
+But for real matrices, complex eigenvalues occur in **conjugate pairs**. So do complex **eigenvectors**.
+
+**Note:** If matrices ``A, B`` have complex entries and ``AB`` is defined, then ``Conj(AB) = Conj(A)*Conj(B)`` (see: Exercise 20).
+
+See Example 5.
+
+
+The Product and Sum of the Eigenvalues
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``p(λ) = det(A-λI) = (-1)^n*(λ - λ1)(λ - λ2)...(λ - λ_n)``
+
+``...              = (λ1 - λ)(λ2 - λ)...(λ_n - λ)``.
+
+Therefore,
+
+``λ1 * λ2 * ... * λ_n = p(0) = det(A)``.
+
+We also have the sum as the ``trace`` of ``A``,
+
+``Sum[λ_i] = Sum[a_ii] = tr(A)``.
+
+Ex 6: Observe the properties of ``λ1*λ2`` and ``λ1 + λ2``.
+
+
+Similar Matrices
+~~~~~~~~~~~~~~~~
+
+**Recall:** B is *similar* to A if there is a non-singular matrix ``S`` such that ``B = S^-1 A S``.
+
+
+Theorem 6.1.1: Let ``A, B`` be ``n x n``. If ``B`` **is similar** to ``A``, then they have the same characteristic polynomial and the **same eigenvalues**.
+
+Proof:
+
+.. code-block:: text
+
+  p_B(λ) = det(B - λI)
+         = det(S^-1 A S - λI)
+         = det(S^-1(A - λI)S)
+         = det(S^-1)det(A - λI)det(S)
+         = det(A - λI)
+         = p_A(λ)
+
+Since they have the same characteristic equation, they have the same roots (same eigenvalues).
+
+
+Ex 7: Check that ``S`` and ``T`` matrices have the same eigenvalues.
 
 
 
 6.3 - Diagonalization
 #####################
+
+We want to factor ``A=XDX^-1``, where ``D`` is a diagonal matrix.
+
+Theorem 6.3.1: For ``k`` **distinct** eigenvalues of an ``n x n`` matrix, the ``k`` **eigenvectors are linearly independent**.
+(see proof on page 328)
+
+
+Theorem 6.3.2: An ``n x n`` matrix is diagonalizable iff it has ``n`` linearly independent eigenvectors.
+(see proof on page 328)
+
+
+**Remarks**
+
+1. If ``A`` is diagonalizable, then the columns of ``X`` are eigenvectors of ``A`` and the diagonal elements of ``D`` are the corresponding eigenvalues of ``A``.
+2. The matrix ``X`` is **not unique**. Reordering columns of ``X`` produces a new ``D``.
+3. If ``A`` is ``n x n`` and has ``n`` *distinct* eigenvalues, then ``A`` is diagonalizable.
+
+   a) If they are **not distinct**, then the diagonalizability of ``A`` depends on the linear independence of the eigenvectors.
+
+4. If ``A`` is diagonalizable, then ``A`` can be factored to ``XDX^-1``.
+
+
+In general, ``A^k = X D^k X^-1``.
+
+It's easy to compute powers of ``A`` based on ``D``.
+
+
+Ex 2: If every eigenvalue ``λ_i ∈ {0, 1}`` is either zero or one, then ``A^k=A``.
+
+
+If it has fewer than ``n`` linearly independent eigenvectors, we call the matrix **defective**.
+From Theorem 6.3.2, we know a defective matrix is **not** diagonalizable.
+
+Ex 3: If ``A = ((1, 1), (0, 1))``, then both eigenvalue are ``1``. Since any eigenvector corresponding to ``λ = 1`` are a multiple of ``x1 = (1,0)ᵀ``, A is defective and cannot be diagonalized.
+
+
+Ex 4:
+
+- ``A`` is defective since it has only two linearly independent eigenvectors
+- ``B`` is not, since its double root has an eigenspace of dimension 2.
+
+Having the algebraic multiplicity not exceed the geometric multiplicity is key in maintaining diagonalizability.
+
+
+APPLICATION 1: Markov Chains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**TODO:** Finish remaining (optional) content for this section.
 
 
 
